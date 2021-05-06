@@ -33,3 +33,19 @@ for(var i=0, len = arr.len; i<len; i) {
 
 }
 
+// reverse for문
+varr = [1,2,3];
+var len = arr.length;
+for(var i=len; i>0; i--) {
+
+}
+
+//모든 문자열도 객체로 읽힘
+"ab:cd".split(":"); //["ab,"cd]
+"ab:cd".replace(":", "$"); //"ab$cd"
+" abcde  ".trim(); //"abcde"
+
+//Split는 배열을 만들어주는 메소드
+var result = "ab:cd".split("");
+console.log(toString.call(result));//[object Array]
+console.log(typeof result);
