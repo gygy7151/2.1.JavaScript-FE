@@ -43,3 +43,14 @@ function printname(firstname /*undefined*/) {
     var myname = "jisu";
     return "name is " + firstname;
 }
+
+function printName(firstname) {
+    console.log("name is " + firstname);
+
+    var inner = function() {
+        return "inner value";
+    }
+
+    var result = inner();
+    console.log("name is " + result);s
+}
