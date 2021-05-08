@@ -32,3 +32,14 @@ function a() {
     return "";
 }
 console.log(a());
+
+//함수의 호출.
+function printname(firstname) {
+    var myname = "jisu";
+    return myname + " " + firstname;
+}
+
+function printname(firstname /*undefined*/) {
+    var myname = "jisu";
+    return "name is " + firstname;
+}
