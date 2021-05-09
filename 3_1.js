@@ -45,12 +45,54 @@ function printname(firstname /*undefined*/) {
 }
 
 function printName(firstname) {
-    console.log("name is " + firstname);
+
+
+    var result = inner();
+    console.log("name is " + result);s
 
     var inner = function() {
         return "inner value";
     }
 
-    var result = inner();
-    console.log("name is " + result);s
 }
+
+printName();
+// 이러면 TypeError 나옴
+
+//호이스팅 sample 예시
+console.log("hello");
+var myname = "HEEE";
+let myname2 ="HEEE2";
+
+/* JS parser 내부의 호이스팅 (Hoisting)의 결과*/
+var myname; //선언
+console.log("hello");
+myname = "HEEE";    //"할당"
+let myname2 = "HEEE2";  [Hoisting]
+
+
+foo();
+foo2();
+
+function foo() { // 함수선언문
+    console.log("hello");
+}
+
+var foo2 = function () { // 함수표현식
+    console.log("hello2");
+}
+
+/** JS parser 내부의 호이스팅  */
+var foo2;
+
+function foo() {
+    console.log("hello");
+}
+
+foo();
+foo2(); // ERROR!
+
+foo2  = function() {
+    console.log("hello2");
+}
+
